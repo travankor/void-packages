@@ -1,0 +1,13 @@
+# Template file for 'singularity'
+pkgname=singularity
+version=0.30c
+revision=1
+build_style=python-module
+hostmakedepends=""
+depends="python-numpy python-pygame"
+short_desc="A simulation of a true AI. Survive, grow, and learn."
+maintainer="travankor <travankor@tuta.io>"
+license="GPL-2.0-or-later"
+homepage="https://github.com/singularity/singularity"
+distfiles="${homepage}/archive/v${version}.tar.gz"
+checksum=9658249e10cc0f360a048a6838178faf152a3883386abea6b05ccb72d497d8f1
