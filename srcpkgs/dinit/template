@@ -1,0 +1,19 @@
+# Template file for 'dinit'
+pkgname=dinit
+version=0.8.2
+revision=1
+build_style=gnu-makefile
+hostmakedepends="m4 tar"
+short_desc="C++ service manager and init system"
+maintainer="travankor <travankor@tuta.io>"
+license="Apache-2.0"
+homepage="https://github.com/davmac314/dinit"
+changelog="https://raw.githubusercontent.com/davmac314/dinit/master/NEWS"
+distfiles="https://github.com/davmac314/dinit/archive/v${version}.tar.gz"
+checksum=269a34b3e5d655a2516d827c2d3403f2fa85049deba9043fb5dbd3f313aa0ee5
+
+pre_build() {
+	ln -sf configs/mconfig.Linux mconfig
+	sed -i 's|/sbin|/usr/bin|' mconfig
+	sed -i 's|BUILD_SHUTDOWN=yes|BUILD_SHUTDOWN=no|' mconfig
+}
