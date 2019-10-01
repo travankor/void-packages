@@ -1,10 +1,10 @@
 # Template file for 'libva-intel-driver'
 pkgname=libva-intel-driver
 version=2.3.0
-revision=2
+revision=3
 wrksrc="intel-vaapi-driver-${version}"
 build_style=meson
-configure_args="-Dwith_wayland=yes -Dwith_x11=yes"
+configure_args="-Dwith_wayland=yes -Dwith_x11=yes -Denable_hybrid_codec=true"
 hostmakedepends="pkg-config"
 makedepends="libX11-devel libva-glx-devel libdrm-devel wayland-devel MesaLib-devel"
 short_desc="Video Acceleration (VA) API - Intel Graphics backend"
