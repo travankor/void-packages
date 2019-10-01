@@ -1,0 +1,22 @@
+# Template file for 'cmrt'
+pkgname=cmrt
+version=1.0.6
+revision=1
+build_style=gnu-configure
+#configure_args=""
+hostmakedepends="autoconf automake pkg-config libtool"
+makedepends="libdrm-devel libva-devel"
+short_desc="C for Media Runtime"
+maintainer="travankor <travankor@tuta.io>"
+license="MIT"
+homepage="https://github.com/intel/cmrt"
+distfiles="https://github.com/intel/cmrt/archive/${version}.tar.gz"
+checksum=ca22e905a2717fc740e703e65a0061a0e11f4ea513ba970bbc10b3bd6d28e6e0
+
+pre_configure() {
+	autoreconf -i
+}
+
+post_install() {
+	vlicense LICENSE
+}
