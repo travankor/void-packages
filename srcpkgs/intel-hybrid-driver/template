@@ -1,0 +1,26 @@
+# Template file for 'intel-hybrid-driver'
+pkgname=intel-hybrid-driver
+version=1.0.2
+revision=1
+_githash=edead0c17e2818bc0fee0ea644f85ab81bbe6f7a
+wrksrc=$pkgname-$_githash
+archs="i686 x86_64"
+build_style=gnu-configure
+configure_args="--disable-x11"
+hostmakedepends="autoconf automake libtool pkg-config"
+makedepends="cmrt libdrm-devel libva-devel" 
+depends="libva-intel-driver"
+short_desc="VA-API Driver for Broadwell"
+maintainer="travankor <travankor@tuta.io>"
+license="MIT"
+homepage="https://github.com/intel/intel-hybrid-driver"
+distfiles="https://github.com/intel/intel-hybrid-driver/archive/${_githash}.tar.gz"
+checksum=e1f6023ab322467b323e84a721124f283fdda8c85776dba76532ee8be906ba1d
+
+pre_configure() {
+	autoreconf -vi
+}
+
+post_install() {
+	vlicense COPYING
+}
