@@ -1,6 +1,6 @@
 # Template file for 'k3rmit'
 pkgname=k3rmit
-version=2.1
+version=2.2
 revision=1
 build_style=cmake
 hostmakedepends="pkg-config"
@@ -10,4 +10,4 @@ maintainer="travankor <travankor@tuta.io>"
 license="GPL-3.0-or-later"
 homepage="https://github.com/orhun/k3rmit"
 distfiles="https://github.com/orhun/k3rmit/archive/${version}.tar.gz"
-checksum=35d306696b736e94533cdcd5ae5d890cd1f2641e7315c96083345eacc5d57405
+checksum=7144af2d677e2aa57a2f98844a0cd9956e872e3b3509f5b41153980e92ae5d8e
