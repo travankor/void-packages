@@ -1,0 +1,22 @@
+# Template file for 'twemoji-fedora'
+pkgname=twemoji-fedora
+version=12.1.5
+revision=1
+_fedrel=3.fc32
+archs=noarch
+wrksrc=usr
+hostmakedepends="rpmextract"
+depends="font-util"
+short_desc="Twemoji rendered in CBLC"
+maintainer="travankor <travankor@tuta.io>"
+license="CC-BY-SA-4.0, MIT"
+homepage="https://fedoraproject.org/wiki/Twitter_Twemoji_fonts"
+distfiles="https://archives.fedoraproject.org/pub/fedora/linux/development/rawhide/Everything/x86_64/os/Packages/t/twitter-twemoji-fonts-${version}-${_fedrel}.noarch.rpm"
+checksum=8c494ad87c8074861d24cd1796bf62e2d7d9dd13bddb4fb8638738b8a3d14043
+font_dirs="/usr/share/fonts/twemoji"
+
+do_install() {
+	vlicense share/licenses/twitter-twemoji-fonts/LICENSE
+	vmkdir etc/fonts/conf.d/
+	install -Dm644 share/fonts/twemoji/Twemoji.ttf ${DESTDIR}/usr/share/fonts/twemoji/Twemoji.ttf
+}
