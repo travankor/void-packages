@@ -1,0 +1,16 @@
+# Template file for 'kiro-editor'
+pkgname=kiro-editor
+version=0.3.5
+revision=1
+build_style=cargo
+short_desc="Tiny UTF-8 text editor written in Rust"
+maintainer="travankor <travankor@tuta.io>"
+license="MIT"
+homepage="https://github.com/rhysd/kiro-editor"
+changelog="https://raw.githubusercontent.com/rhysd/kiro-editor/master/CHANGELOG.md"
+distfiles="https://github.com/rhysd/kiro-editor/archive/${version}.tar.gz"
+checksum=886e79923ab1a7c81eecbe53e9312f6e70d20fde13d5b23c230fda7c24f41e5e
+
+post_install() {
+	vlicense LICENSE
+}
