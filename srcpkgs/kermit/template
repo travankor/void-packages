@@ -1,0 +1,13 @@
+# Template file for 'kermit'
+pkgname=kermit
+version=3.0
+revision=1
+build_style=cmake
+hostmakedepends="pkg-config"
+makedepends="vte3-devel"
+short_desc="VTE terminal emulator that aims to be simple, fast and effective"
+maintainer="travankor <travankor@tuta.io>"
+license="GPL-3.0-or-later"
+homepage="https://github.com/orhun/kermit"
+distfiles="https://github.com/orhun/kermit/archive/${version}.tar.gz"
+checksum=b6f629a45ceee1b081d4cbfd28c525e687e621ddbbd3313c0ad8230f768a9c37
