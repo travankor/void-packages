@@ -1,8 +1,8 @@
 # Template file for 'rofi-wl'
 pkgname=rofi-wl
-version=1.5.4
+version=1.6.0
 revision=1
-_githash=807a2c0969293b32b377251767af676d49c68311
+_githash=a67307c3ace2051a599590ff9494e9feeecc3933
 create_wrksrc=yes
 wrksrc=${pkgname%-*}-${_githash}
 build_wrksrc=${pkgname%-*}-${_githash}
@@ -14,13 +14,14 @@ makedepends="check-devel libXinerama-devel librsvg-devel
 short_desc="Window switcher, run dialog and dmenu replacement"
 maintainer="Dave Davenport <qball@gmpclient.org>"
 license="MIT"
-homepage="https://github.com/lbonn/rofi"
+homepage="https://github.com/travankor/rofi"
 distfiles="${homepage}/archive/${_githash}.tar.gz
  https://github.com/sardemff7/libgwater/archive/e6faf48267ae40547cb86c125f265f54f382df1c.tar.gz
  https://github.com/sardemff7/libnkutils/archive/6164bacaef10031ce77380499cfad2ae818ab6b0.tar.gz"
-checksum="b73caad55831e78f7f713995493a9cb1149b44c422aeff303920fa8dff1943d1
+checksum="e9115fd11b5c1149572658323bd756a4c8955fcd20961acfa90388e3c808a5b8
  4a7f26fdc329c0638b5e4499b4ed8ec2a2354093cd05613b896dbaa212072ef7
  2ed4a6fa8d2ee8c4b810f53eeb30de3c3578e150c8f2cc420ec445ccaeedb6c6"
+conflicts="rofi>=0"
 
 post_extract() {
 	mv libgwater-e6faf48267ae40547cb86c125f265f54f382df1c/* ${build_wrksrc}/subprojects/libgwater
