@@ -11,5 +11,6 @@ if [ ! -x usr/bin/booster ]; then
 	exit 0
 fi
 
+umask 0077
 usr/bin/booster -force -output boot/initramfs-${VERSION}.img -kernelVersion ${VERSION}
 exit $?
